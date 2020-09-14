@@ -4,6 +4,7 @@ export default class Journal {
     this.currentId = 0;
   }
   addPlant(plant) { 
+    plant.id = this.assignId();
     this.plants.push(plant);
   }
   assignId (){

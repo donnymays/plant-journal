@@ -5,6 +5,17 @@ import './css/styles.css';
 import Plant from './plant.js';
 import Journal from './journal.js'
 
+
+function showPlant(plantToDisplay) {
+  let plantsList = $("ul#plants");
+  let htmlForPlantInfo = "";
+  plantToDisplay.plants.forEach(function(plant) {
+    htmlForPlantInfo += "<li id=" + plant.id + ">" + plant.name + " " + "</li>";
+  });
+  plantsList.append(htmlForPlantInfo);
+};
+
+
 $(document).ready(function() {
   $("#addPlant").submit(function() {
     event.preventDefault();
@@ -15,7 +26,10 @@ $(document).ready(function() {
     let inputtedWaterDay = $("input:radio[name=waterDay]:checked").val();
 
     let newPlant = new Plant(inputtedPlantName, inputtedPlantType, inputtedPlantDate, inputtedWaterDay);
-    console.log(newPlant);
+    let journal = new Journal();
+    journal.addPlant(newPlant);
+    console.log(journal.plants);
+    showPlant(journal);
 
   });
 });
