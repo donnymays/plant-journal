@@ -1,10 +1,9 @@
 export default class Journal {
-  constructor(plants) {
+  constructor(plants, currentId) {
     this.plants = [];
     this.currentId = 0;
   }
-  addContact() {
-    plant.id = this.assignId();
+  addPlant(plant) { 
     this.plants.push(plant);
   }
   assignId (){

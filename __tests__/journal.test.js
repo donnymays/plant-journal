@@ -1,9 +1,12 @@
 import Journal from '../src/journal.js';
+import Plant from '../src/plant.js';
 
 describe('Journal', () => {
 
-  test('should correctly create a Plant object with properties', () => {
-    const plant = new Plant(5,10);
-    expect(plant.age).toEqual(6);
+  test('should correctly add a Plant object to the Journal array', () => {
+    const plant = new Plant("Mr. Cactus");
+    const journal = new Journal();
+    journal.addPlant();
+    expect(plants[0].plant.name).toEqual("Mr. Cactus");
   }); 
 });
