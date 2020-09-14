@@ -1,0 +1,20 @@
+To Do:
+
+- Start with TDD expected inputs outputs
+
+  -Add plant objects to journal:
+  Sample Input: 
+  Sample Output:
+  -Remove plant objects from journal:
+  
+  -Allow users to track plant growth:
+
+  -Allow users to add events to plants:
+    Watering:
+
+    Fertilizing:
+
+    Repotting:
+  
+  -Allow users to add notes to plants ie “found spider mites! Treated with neem oil”:
+
