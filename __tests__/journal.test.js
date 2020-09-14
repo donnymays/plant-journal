@@ -1,5 +1,5 @@
 import Journal from '../src/journal.js';
-import Plant from '../src/plant.js';
+import { Plant } from '../src/journal.js';
 
 describe('Journal', () => {
 
@@ -7,6 +7,7 @@ describe('Journal', () => {
     const plant = new Plant("Mr. Cactus");
     const journal = new Journal();
     journal.addPlant();
-    expect(plants[0].plant.name).toEqual("Mr. Cactus");
+    console.log(journal.plants);
+    expect(journal.plants.length).toEqual(1);
   }); 
 });
