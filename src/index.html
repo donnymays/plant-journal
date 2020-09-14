@@ -8,6 +8,7 @@
      <form id="addPlant">
       <label for="plantName">Plant Name:</label>
       <input id="plantName" type="text">
+      
       <h2>Select your plant type:</h2>
       <input id="succulent" type="radio" value="succulent">
       <label for="succulent">Succulent</label>
@@ -17,13 +18,22 @@
       <label for="flower">Flower</label>
       <input id="fern" type="radio" value="fern">
       <label for="fern">Fern</label>
+      <br>
       
-
-
-
+      <label for="plantBirthday">Select the day of planting:</label>
+      <input type="date">
+      
+      <h2>Did you water this plant today?</h2>
+      <input type="radio">
+      <label for="waterDay">Yes</label>
+      <input type="radio">
+      <label for="waterDay">No</label>
+      
+      <button class="btn-success" type="submit">Add your plant!</button>
      </form>
-      
+     <div id="plantCard">
 
+     </div>
     </div>
   </body>
 </html>
