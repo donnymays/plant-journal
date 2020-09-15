@@ -17,9 +17,13 @@ module.exports = {
     new CleanWebpackPlugin(), 
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'plant-journal',
+      filename: 'index.html',
       template: './src/index.html',
       inject: 'body'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'plantList.html',
+      template: './src/plantList.html'
     })
   ],
   module: {
@@ -31,6 +35,25 @@ module.exports = {
           'css-loader'
         ]
       },
+      {
+  test: /\.(gif|png|jpe?g)$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'assets/images/'
+      }
+    }
+  ]
+},
+
+{
+  test:/\.html$/,
+  use: [
+    'html-loader'
+  ]
+},
       {
         test: /\.js$/,
         exclude: /node_modules/,

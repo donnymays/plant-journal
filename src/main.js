@@ -3,7 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Plant from './plant.js';
-import Journal from './journal.js'
+import Journal from './journal.js';
 
 
 function showPlant(plantToDisplay) {
@@ -13,7 +13,7 @@ function showPlant(plantToDisplay) {
     htmlForPlantInfo += "<li id=" + plant.id + ">" + plant.name + " " + "</li>";
   });
   plantsList.append(htmlForPlantInfo);
-};
+}
 
 
 $(document).ready(function() {
