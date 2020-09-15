@@ -24,8 +24,8 @@ export class Plant {
 
   waterDate(){
     if(this.waterDay == true){
-      var firstDay = new Date(+7); //current date
-      var nextWeek = new Date(firstDay.getTime() + 7 * 24 * 60 * 60 * 1000);
+      let firstDay = new Date(); //current date
+      let nextWeek = new Date(firstDay.getTime() + 7 * 24 * 60 * 60 * 1000);
       this.waterDay = nextWeek;
     }
   }
