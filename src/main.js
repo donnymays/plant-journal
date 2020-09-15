@@ -5,14 +5,16 @@ import './css/styles.css';
 import Plant from './plant.js';
 import Journal from './journal.js';
 
+// function showPlant(plantToDisplay) {
+//   let plantsList = $("ul#plants");
+//   let htmlForPlantInfo = "";
+//   plantToDisplay.plants.forEach(function(plant) {
+//     htmlForPlantInfo += "<li id=" + plant.id + ">" + plant.name + " " + "</li>";
+//   });
+//   plantsList.append(htmlForPlantInfo);
+// }
+function showPlantCardTitle() {
 
-function showPlant(plantToDisplay) {
-  let plantsList = $("ul#plants");
-  let htmlForPlantInfo = "";
-  plantToDisplay.plants.forEach(function(plant) {
-    htmlForPlantInfo += "<li id=" + plant.id + ">" + plant.name + " " + "</li>";
-  });
-  plantsList.append(htmlForPlantInfo);
 }
 
 
