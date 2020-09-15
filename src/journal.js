@@ -1,4 +1,4 @@
-;export class Journal {
+export class Journal {
   constructor() {
     this.plants = [];
     this.currentId = 0;
@@ -32,8 +32,8 @@ export class Plant {
 
   isWatered(){
     if(this.type == "succulent"){
-       let water = "You will need to water your plant within 7 days. In addition, if the leaves feel rubbery and bend easily at any point, please water your succulent. If the leaves change color, you are over watering your succulent."
-       this.waterNote = water;
+      let water = "You will need to water your plant within 7 days. In addition, if the leaves feel rubbery and bend easily at any point, please water your succulent. If the leaves change color, you are over watering your succulent.";
+      this.waterNote = water;
     }
     else if(this.type == "Cactus"){
       let water ="You will need to water your plant again in 7 days. Let cacti dry completely between waterings.";
