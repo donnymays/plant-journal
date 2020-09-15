@@ -1,9 +1,9 @@
 .jumbotron {
-  background-color: rgb(0, 168, 90);
+  background-image: linear-gradient(green, lightgreen);
   border: black;
   border-width: 5px;
 }
 
 body {
-  background-color: tan;
+  background-image: linear-gradient(tan, coral);
 }
