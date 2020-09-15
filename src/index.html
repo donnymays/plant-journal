@@ -7,40 +7,40 @@
       <h1> Plant Journal!</h1>
     </div>
     <div class="container">
-      <form id="addPlant">
-      <label for="plantName">Plant Name:</label>
-      <input id="plantName" type="text">
-      
-      <h2>Select your plant type:</h2>
-      <input name="plantType" type="radio" value="succulent">
-      <label for="succulent">Succulent</label>
-      <input name="plantType" type="radio" value="cactus">
-      <label for="cactus">Cactus</label>
-      <input name="plantType" type="radio" value="flower">
-      <label for="flower">Flower</label>
-      <input name="plantType" type="radio" value="fern">
-      <label for="fern">Fern</label>
-      <br>
-      
-      <label for="plantBirthday">Select the day of planting:</label>
-      <input id="plantBirthday" type="date" name="plantBirthday">
-      
-      <h2>Did you water this plant today?</h2>
-      <input name="waterDay" type="radio" value="true">
-      <label for="waterDay">Yes</label>
-      <input name="waterDay" type="radio" value="false">
-      <label for="waterDay">No</label>
-      
-      <button class="btn-success" type="submit">Add your plant!</button>
-     </form>
-    
-    <div>
-      <ul id="plants">
-
-      </ul>
-      <a href="plantList.html">Plant List</a>
+      <div class="card">
+        <div class="card-body">
+        <form id="addPlant">
+        <label for="plantName">Plant Name:</label>
+        <input id="plantName" type="text">
+        <h2>Select your plant type:</h2>
+        <input name="plantType" type="radio" value="succulent">
+        <label for="succulent">Succulent</label>
+        <input name="plantType" type="radio" value="cactus">
+        <label for="cactus">Cactus</label>
+        <input name="plantType" type="radio" value="flower">
+        <label for="flower">Flower</label>
+        <input name="plantType" type="radio" value="fern">
+        <label for="fern">Fern</label>
+        <br>
+        <label for="plantBirthday">Select the day of planting:</label>
+        <input id="plantBirthday" type="date" name="plantBirthday">
+        <h2>Did you water this plant today?</h2>
+        <input name="waterDay" type="radio" value="true">
+        <label for="waterDay">Yes</label>
+        <input name="waterDay" type="radio" value="false">
+        <label for="waterDay">No</label>
+      </div>
     </div>
+    <button class="btn-success" type="submit">Add your plant!</button>
+    </form>
+  
+  <div>
+    <ul id="plants">
 
-    </div>
+    </ul>
+    <a href="plantList.html">Plant List</a>
+  </div>
+
+  </div>
   </body>
 </html>
