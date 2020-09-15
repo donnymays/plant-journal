@@ -22,7 +22,7 @@ function showPlantCard(plantCardToDisplay) {
     htmlForPlantCard += "<div class='col-md-4'><div class='card'><div class='card-body'><h5 id='plantCardTitle' class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2 text-muted'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p>";
     plantDiv.append(htmlForPlantCard);
   });
-};
+}
 
 
 $(document).ready(function () {

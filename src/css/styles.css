@@ -4,12 +4,21 @@
   border-width: 5px;
 }
 
+h1 {
+  font-family: "Sacramento";
+}
+
+h5 {
+  font-family: "Oswald";
+}
+
 body {
   background-image: linear-gradient(tan, coral);
 }
 
 .card {
+  opacity: 0.9;
   background-color: tan;
-  border-radius: 2%;
+  border-radius: 25px;
   border-color: black;
 }

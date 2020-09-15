@@ -1,42 +1,61 @@
 <html lang="en-US">
-  <head>
-    <title>plant-journal</title>
-  </head>
-  <body>
-    <div class="jumbotron">
-      <h1>Plant Diary</h1>
-      <h5>Keep track of your plants as they grow!</h5>
-    </div>
-    <div class="container">
-      <div class="card">
-        <div class="card-body">
-        <form id="addPlant">
-        <label for="plantName">Plant Name:</label>
-        <input id="plantName" type="text">
-        <h5>Select your plant type:</h5>
-        <input name="plantType" type="radio" value="succulent">
-        <label for="succulent">Succulent</label>
-        <input name="plantType" type="radio" value="cactus">
-        <label for="cactus">Cactus</label>
-        <input name="plantType" type="radio" value="flower">
-        <label for="flower">Flower</label>
-        <input name="plantType" type="radio" value="fern">
-        <label for="fern">Fern</label>
-        <br>
-        <label for="plantBirthday">Select the day of planting:</label>
-        <input id="plantBirthday" type="date" name="plantBirthday">
-        <h5>Did you water this plant today?</h5>
-        <input name="waterDay" type="radio" value="true">
-        <label for="waterDay">Yes</label>
-        <input name="waterDay" type="radio" value="false">
-        <label for="waterDay">No</label>
-        <br>
-        <button class="btn-success" type="submit">Add your plant!</button>
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sacramento&display=swap" rel="stylesheet">
+
+  <title>plant-journal</title>
+</head>
+
+<body
+  style="background-image: url(https://cdn.apartmenttherapy.info/image/upload/v1586153210/at/news-culture/2020-04/200402-bloomscape-zoom-2.png);">
+  <div class="jumbotron">
+    <h1>Plant Diary</h1>
+    <h5>Keep track of your plants as they grow!</h5>
+  </div>
+  <div class="container">
+  
+        <div class="card">
+          <div class="row">
+          <div class="col-md-6"></div>
+          <div class="card-body">
+            <form id="addPlant">
+              <label for="plantName">Plant Name:</label>
+              <input id="plantName" type="text">
+              <h5>Select your plant type:</h5>
+              <input name="plantType" type="radio" value="succulent">
+              <label for="succulent">Succulent</label>
+              <input name="plantType" type="radio" value="cactus">
+              <label for="cactus">Cactus</label>
+              <input name="plantType" type="radio" value="flower">
+              <label for="flower">Flower</label>
+              <input name="plantType" type="radio" value="fern">
+              <label for="fern">Fern</label>
+              <br>
+              <label for="plantBirthday">Select the day of planting:</label>
+              <input id="plantBirthday" type="date" name="plantBirthday">
+              <h5>Did you water this plant today?</h5>
+              <input name="waterDay" type="radio" value="true">
+              <label for="waterDay">Yes</label>
+              <input name="waterDay" type="radio" value="false">
+              <label for="waterDay">No</label>
+              <button class="btn-success" type="submit">Add your plant!</button>
+              <br>
+          </div>
+          <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.</p>
+          </div>
+        </div>
       </div>
-      <div id="plantCards" class="row">
-      </div>
-    </div>
-    </form>
+     </div>
+
+    <div id="plantCards" class="row"></div>
+  </div>
+  </form>
   </div>
 <script type="text/javascript" src="bundle.js"></script></body>
+
 </html>
