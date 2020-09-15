@@ -21,4 +21,18 @@ body {
   background-color: tan;
   border-radius: 25px;
   border-color: black;
+  margin-top: 25px;
+}
+
+#Lorem {
+  padding: 50px;
+}
+
+
+#plantCards {
+  margin: 10px;
+}
+
+#img {
+  float: right;
 }

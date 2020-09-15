@@ -1,25 +1,26 @@
 <html lang="en-US">
-
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sacramento&display=swap" rel="stylesheet">
-
   <title>plant-journal</title>
 </head>
-
-<body
-  style="background-image: url(https://cdn.apartmenttherapy.info/image/upload/v1586153210/at/news-culture/2020-04/200402-bloomscape-zoom-2.png);">
+<body style="background-image: url(https://cdn.apartmenttherapy.info/image/upload/v1586153210/at/news-culture/2020-04/200402-bloomscape-zoom-2.png);">
   <div class="jumbotron">
-    <h1>Plant Diary</h1>
-    <h5>Keep track of your plants as they grow!</h5>
+    <div class="col-md-3">
+      <h1>Plant Diary</h1>
+      <h5>Keep track of your plants as they grow!</h5>
+    </div>
+    <div class="col-md-3" id="img">
+      <img src="https://www.pngitem.com/pimgs/m/13-133991_plants-leaf-flowering-silhouette-plant-free-download-plant.png" alt="flower" style="width:30px;height:30px;">
+    </div>
   </div>
   <div class="container">
   
-        <div class="card">
+        <div class="card" id="Lorem">
           <div class="row">
           <div class="col-md-6">
             <div class="card-body">
               <form id="addPlant">
-                <label for="plantName">Plant Name:</label>
+                <label for="plantName"><span><h5>Plant Name:</h5></span></label>
                 <input id="plantName" type="text">
                 <h5>Select your plant type:</h5>
                 <input name="plantType" type="radio" value="succulent">
@@ -31,7 +32,7 @@
                 <input name="plantType" type="radio" value="fern">
                 <label for="fern">Fern</label>
                 <br>
-                <label for="plantBirthday">Select the day of planting:</label>
+                <h5 label for="plantBirthday">Select the day of planting:</label></h5>
                 <input id="plantBirthday" type="date" name="plantBirthday">
                 <h5>Did you water this plant today?</h5>
                 <input name="waterDay" type="radio" value="true">
@@ -43,7 +44,7 @@
             </div>
           </div>
           
-          <div class="col-md-6" id="Lorem">
+          <div class="col-md-6" >
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
               ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -57,7 +58,14 @@
     <div id="plantCards" class="row"></div>
   </div>
   </form>
+<br>
+<br>
+<br>
+  <div class="container">
+    <footer class="card">
+      <p>Authors: Alex Goodwin, Garrett Brown, Alma Frankenstein, Donny Mays, Chloe Hellberg </p>
+    </footer>
   </div>
-</body>
 
+</body>
 </html>
