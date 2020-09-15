@@ -7,3 +7,9 @@
 body {
   background-image: linear-gradient(tan, coral);
 }
+
+.card {
+  background-color: tan;
+  border-radius: 2%;
+  border-color: black;
+}
