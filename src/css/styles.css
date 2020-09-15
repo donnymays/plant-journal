@@ -4,9 +4,9 @@
   border-width: 5px;
 }
 
-body {
-  background-image: linear-gradient(tan, coral);
-}
+/* body {
+  background-image: url("img/plant-background.jpg");
+} */
 
 .card {
   background-color: tan;
