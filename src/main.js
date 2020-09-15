@@ -15,48 +15,40 @@ import Journal from './journal.js';
 // }
 
 
-function showPlantCardTitle(plantTitleToDisplay) {
+function showPlantCard(plantCardToDisplay) {
   let plantDiv = $("div#plantCards");
-  let htmlForPlantTitle = "";
-  plantTitleToDisplay.plants.forEach(function (plant) {
-    htmlForPlantTitle += "<div class='col-md-4'><div class='card'><div class='card-body'><h5 id='plantCardTitle' class='card-title'>" + plant.name + "</h5>";
+  let htmlForPlantCard = "";
+  plantCardToDisplay.plants.forEach(function (plant) {
+    htmlForPlantCard += "<div class='col-md-4'><div class='card'><div class='card-body'><h5 id='plantCardTitle' class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2 text-muted'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p>";
+    plantDiv.append(htmlForPlantCard);
   });
-  plantDiv.append(htmlForPlantTitle);
 };
-  
-function showPlantCardTitle(plantTypeToDisplay) {
-    let plantDiv = $("div#plantCards");
-    let htmlForPlantType = "";
-    plantTypeToDisplay.plants.forEach(function (plant) {
-      htmlForPlantType += '<h6 id="plantCardType" class="card-subtitle mb-2 text-muted">' + plant.type + "</h6>";
-    });
-  
-  };
 
 
 
-  
 
 
 
-  $(document).ready(function () {
-    $("#addPlant").submit(function () {
-      event.preventDefault();
 
-      let inputtedPlantName = $("input#plantName").val();
-      let inputtedPlantType = $("input:radio[name=plantType]:checked").val();
-      let inputtedPlantDate = $("input#plantBirthday").val();
-      let inputtedWaterDay = $("input:radio[name=waterDay]:checked").val();
 
-      $("input#plantName").val("");
-      $("input:radio[name=plantType]:checked").val("");
-      $("input#plantBirthday").val("");
-      $("input:radio[name=waterDay]:checked").val("");
+$(document).ready(function () {
+  $("#addPlant").submit(function () {
+    event.preventDefault();
 
-      let newPlant = new Plant(inputtedPlantName, inputtedPlantType, inputtedPlantDate, inputtedWaterDay);
-      let journal = new Journal();
-      journal.addPlant(newPlant);
-      showPlantCardTitle(journal);
+    let inputtedPlantName = $("input#plantName").val();
+    let inputtedPlantType = $("input:radio[name=plantType]:checked").val();
+    let inputtedPlantDate = $("input#plantBirthday").val();
+    let inputtedWaterDay = $("input:radio[name=waterDay]:checked").val();
 
-    });
+    $("input#plantName").val("");
+    // $("input:radio[name=plantType]:checked").val("");
+    $("input#plantBirthday").val("");
+    // $("input:radio[name=waterDay]:checked").val("");
+
+    let newPlant = new Plant(inputtedPlantName, inputtedPlantType, inputtedPlantDate, inputtedWaterDay);
+    let journal = new Journal();
+    journal.addPlant(newPlant);
+    showPlantCard(journal);
+
   });
+});
