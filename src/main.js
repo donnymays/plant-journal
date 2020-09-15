@@ -25,12 +25,6 @@ function showPlantCard(plantCardToDisplay) {
 };
 
 
-
-
-
-
-
-
 $(document).ready(function () {
   $("#addPlant").submit(function () {
     event.preventDefault();
@@ -39,11 +33,11 @@ $(document).ready(function () {
     let inputtedPlantType = $("input:radio[name=plantType]:checked").val();
     let inputtedPlantDate = $("input#plantBirthday").val();
     let inputtedWaterDay = $("input:radio[name=waterDay]:checked").val();
+   
 
+    
     $("input#plantName").val("");
-    // $("input:radio[name=plantType]:checked").val("");
     $("input#plantBirthday").val("");
-    // $("input:radio[name=waterDay]:checked").val("");
 
     let newPlant = new Plant(inputtedPlantName, inputtedPlantType, inputtedPlantDate, inputtedWaterDay);
     let journal = new Journal();
