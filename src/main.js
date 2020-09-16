@@ -2,9 +2,8 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-
-// import  Plant from './plant.js';
 import { Journal, Plant } from './journal.js';
+import Trefle from './plant.js';
 
 
 function showPlantCard(plant) {
@@ -45,5 +44,21 @@ $(document).ready(function () {
       alert("it works");
     })
   }); 
-});
 
+  $("#searchPlants").click(function() {
+    event.preventDefault();
+
+    const query = $("#findPlants").val();
+    $("#findPlants").val("");
+
+    let promise = Trefle.searchTrefle(query);
+    promise.then(function(response) {
+      const body = JSON.parse(response);
+
+      for(let i=0; i < body.data.length; i++) {
+        $(".plantResults").append(`Common Name: ${body.data[i].common_name}`);
+        $(".plantResults").append(`<img src=${body.data[i].image_url}>`);
+      }
+    });
+  });
+});
