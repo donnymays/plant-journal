@@ -21,4 +21,15 @@ describe('Journal', () => {
     expect(plant2.id).toEqual(2);
   }); 
 
+  test('should correctly delete an plant', () => {
+    const plant = new Plant("Mr. Cactus");
+    const plant2 = new Plant("Mr. Flower");
+    const journal = new Journal();
+    journal.addPlant(plant);
+    journal.addPlant(plant2);
+    journal.removePlant(plant2.id);
+    expect().toEqual(true);
+    //expect(journal.plants.length).toEqual(1);
+  }); 
+
 });

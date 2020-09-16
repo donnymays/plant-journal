@@ -9,19 +9,13 @@ import { Journal, Plant } from './journal.js';
 function showPlantCard(plant) {
   let plantDiv = $("div#bottomDiv");
   let htmlForPlantCard = "";
-  htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' ><div class='card-body'><h5 id='plantCardTitle' class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p><button id='deleteButton' class='btn-dark' type='button'>Remove plant</button>";
+  htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' id='plantCard" + plant.id + "'><div class='card-body'><h5 class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p><button class='btn-dark deleteButton' type='button'>Remove plant</button>";
   plantDiv.append(htmlForPlantCard);
-  
-  // plantCardToDisplay.plants.forEach(function (plant) {
-  //   htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' ><div class='card-body'><h5 id='plantCardTitle' class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p><button id='deleteButton' class='btn-dark' type='button'>Remove plant</button>";
-  //   plantDiv.append(htmlForPlantCard);
-  // });
 }
- 
+
 let journal = new Journal();
 
 $(document).ready(function () {
-  //attachPlantListeners();
   $("#addPlant").submit(function () {
     event.preventDefault();
 
@@ -38,8 +32,12 @@ $(document).ready(function () {
     journal.addPlant(newPlant);
     console.log(journal.plants);
     showPlantCard(newPlant);
-    //newPlant.showPlantCard();
-    // showPlantCard(journal);
 
-  });
+    $(".deleteButton").click(function () {
+      journal.removePlant(this.id);
+      $("#bottomDiv").hide();
+      alert("it works");
+    })
+  }); 
 });
+

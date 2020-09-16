@@ -11,15 +11,16 @@ export class Journal {
     this.currentId += 1;
     return this.currentId;
   }
-  // findPlant (id) {
-  //   for (let i=0; i < this.plants.length; i++) {
-  //     if (this.plants[i].id == id) {
-  //       return this.plants[i];
-  //     }
-  //   };
-  //   return false;
-  // }
-
+  findPlant (id) {
+    for (let i=0; i < this.plants.length; i++) {
+      if (this.contacts[i]) { 
+        if (this.plants[i].id == id) {
+          return this.plants[i];
+        }
+      }
+    };
+    return false;
+  }
   removePlant(id) {
     for (let i=0; i<this.plants.length; i++) {
       if (this.plants[i]) {
