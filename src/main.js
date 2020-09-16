@@ -20,7 +20,7 @@ function removePlant(id) {
 function attachPlantListeners() {
   $('#deleteButton').click(function() {
     removePlant(this.id);
-  })
+  });
 }
 
 function showPlantCard(plantCardToDisplay) {
@@ -51,6 +51,8 @@ $(document).ready(function () {
     let journal = new Journal();
     journal.addPlant(newPlant);
     showPlantCard(journal);
+    console.log(newPlant);
+    console.log(newPlant.waterDay);
 
   });
 });

@@ -18,7 +18,7 @@ export class Plant {
     this.name = name;
     this.type = type;
     this.birthday = birthday;
-    this.waterDay = waterDay;
+    this.waterDay = waterDay; 
     this.waterNote = "";
   }
 
@@ -46,7 +46,7 @@ export class Plant {
       this.waterNote = water;
     }
     else if(this.type == "Fern"){
-      let water ="You will need to water your plant again in 7 days. Ferns like to be moist but not waterlogged.";
+      let water ="You will need to water your plant again in 4 days. Ferns like to be moist but not waterlogged.";
       this.waterNote = water;
     }
   }
