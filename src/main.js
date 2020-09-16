@@ -62,9 +62,9 @@ $(document).ready(function () {
       const body = JSON.parse(response);
 
       for(let i=0; i < body.data.length; i++) {
-        $(".plantResults").append(`Common Name: ${body.data[i].common_name}`);
-        $(".plantResults").append(`<img src=${body.data[i].image_url}>`);
+        $(".plantResults").append(`<br><li>Common Name: ${body.data[i].common_name}</li> <ul> <img src=${body.data[i].image_url}></ul>`);
+        //$(".plantResults").append(`<img src=${body.data[i].image_url}>`);
       }
     });
   });
-});
+});  
