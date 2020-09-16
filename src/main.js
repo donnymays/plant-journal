@@ -45,6 +45,12 @@ $(document).ready(function () {
     })
   }); 
 
+  $("#research").click(function() {
+    $("#api-search").show();
+    $("#homepage").hide();
+    $("#authors").hide();
+  })
+
   $("#searchPlants").click(function() {
     event.preventDefault();
 

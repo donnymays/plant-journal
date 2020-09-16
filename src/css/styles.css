@@ -82,3 +82,9 @@ footer {
   height: 300px;
 }
 
+#api-search {
+  font-family: "Lobster Two";
+  display: none;
+  margin: 20px;
+  float: center;
+}
