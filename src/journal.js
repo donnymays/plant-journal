@@ -23,10 +23,12 @@ export class Plant {
   }
 
   waterDate(){
-    if(this.waterDay == true){
+    if(this.waterDay == "true"){
       let firstDay = new Date(); //current date
       let nextWeek = new Date(firstDay.getTime() + 7 * 24 * 60 * 60 * 1000);
-      this.waterDay = nextWeek;
+      this.waterDay = `Water next on ${nextWeek}`;
+    } else {
+      this.waterDay = "Don't forget to water!";
     }
   }
 

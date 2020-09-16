@@ -2,8 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import Plant from './plant.js';
-import { Journal } from './journal.js';
+import { Plant, Journal } from './journal.js';
 
 
 function removePlant(id) {
@@ -48,6 +47,7 @@ $(document).ready(function () {
     $("input#plantBirthday").val("");
 
     let newPlant = new Plant(inputtedPlantName, inputtedPlantType, inputtedPlantDate, inputtedWaterDay);
+    newPlant.waterDate();
     let journal = new Journal();
     journal.addPlant(newPlant);
     showPlantCard(journal);
