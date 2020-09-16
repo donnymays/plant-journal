@@ -26,12 +26,18 @@ export class Plant {
     if(this.waterDay == "true"){
       let firstDay = new Date(); //current date
       let daysTilWatering;
-      if(this.type == "succulent" || this.type == "cactus"){
+      if(this.type == "succulent"){
         daysTilWatering = 7;
+        this.waterNote = "You will need to water your plant within 7 days. In addition, if the leaves feel rubbery and bend easily at any point, please water your succulent. If the leaves change color, you are over watering your succulent.";
+      } else if (this.type == "cactus") {
+        daysTilWatering = 6;
+        this.waterNote = "You will need to water your plant again in 6 days. Let cacti dry completely between waterings.";
       } else if(this.type == "flower") {
         daysTilWatering = 3;
+        this.waterNote = "Many indoor flowers (except orchids) will need to be watered again in about 3 days.";
       } else {
         daysTilWatering = 4;
+        this.waterNote = "You will need to water your plant again in 4 days. Ferns like to be misted, and moist but not waterlogged.";
       }
     
       let nextWater = new Date(firstDay.getTime() + daysTilWatering * 24 * 60 * 60 * 1000);
@@ -41,22 +47,4 @@ export class Plant {
     }
   }
 
-  isWatered(){
-    if(this.type == "succulent"){
-      let water = "You will need to water your plant within 7 days. In addition, if the leaves feel rubbery and bend easily at any point, please water your succulent. If the leaves change color, you are over watering your succulent.";
-      this.waterNote = water;
-    }
-    else if(this.type == "cactus"){
-      let water ="You will need to water your plant again in 7 days. Let cacti dry completely between waterings.";
-      this.waterNote = water;
-    }
-    else if(this.type == "flower"){
-      let water ="You will need to water your plant again in 3 days.";
-      this.waterNote = water;
-    }
-    else if(this.type == "fern"){
-      let water ="You will need to water your plant again in 4 days. Ferns like to be moist but not waterlogged.";
-      this.waterNote = water;
-    }
-  }
 }  
