@@ -2,39 +2,23 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { Plant, Journal } from './journal.js';
+
+// import  Plant from './plant.js';
+import { Journal, Plant } from './journal.js';
 
 
-function removePlant(id) {
-  for (let i=0; i<this.plants.length; i++) {
-    if (this.plants[i]) {
-      if (this.plants[i].id == id) {
-        delete this.plants[i];
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-function attachPlantListeners() {
-  $('#deleteButton').click(function() {
-    removePlant(this.id);
-  });
-}
-
-function showPlantCard(plantCardToDisplay) {
+function showPlantCard(plant) {
   let plantDiv = $("div#bottomDiv");
   let htmlForPlantCard = "";
-  plantCardToDisplay.plants.forEach(function (plant) {
-    htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' ><div class='card-body'><h5 id='plantCardTitle' class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p><p>" + plant.waterNote + "</p><button id='deleteButton' class='btn-dark' type='button'>Remove plant</button>";
-    plantDiv.append(htmlForPlantCard);
-  });
+
+  htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' id='plantCard" + plant.id + "'><div class='card-body'><h5 class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p><button class='btn-dark deleteButton' type='button'>Remove plant</button>";
+  plantDiv.append(htmlForPlantCard);
+
 }
 
+let journal = new Journal();
 
 $(document).ready(function () {
-  attachPlantListeners();
   $("#addPlant").submit(function () {
     event.preventDefault();
 
@@ -47,10 +31,19 @@ $(document).ready(function () {
     $("input#plantBirthday").val("");
 
     let newPlant = new Plant(inputtedPlantName, inputtedPlantType, inputtedPlantDate, inputtedWaterDay);
-    newPlant.waterDate();
-    let journal = new Journal();
-    journal.addPlant(newPlant);
-    showPlantCard(journal);
 
-  });
+    newPlant.waterDate();
+    
+
+    journal.addPlant(newPlant);
+    console.log(journal.plants);
+    showPlantCard(newPlant);
+
+    $(".deleteButton").click(function () {
+      journal.removePlant(this.id);
+      $("#bottomDiv").hide();
+      alert("it works");
+    })
+  }); 
 });
+
