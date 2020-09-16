@@ -3,7 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Plant from './plant.js';
-import Journal from './journal.js';
+import { Journal } from './journal.js';
 
 
 function removePlant(id) {
@@ -14,7 +14,7 @@ function removePlant(id) {
         return true;
       }
     }
-  };
+  }
   return false;
 }
 

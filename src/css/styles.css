@@ -1,34 +1,49 @@
-.jumbotron {
-  background-image: linear-gradient(green, lightgreen);
-  border: black;
-  border-width: 5px;
+#title-div {
+  background-color: #797a7e;
+  opacity: 0.8;
+  position:relative;
+  padding-top: 100px;
+  margin-bottom: 0;
 }
+
+#middle-div {
+  background-color: #f7f2e7;
+  opacity: 0.7;
+}
+
+body {
+  text-align: center;
+}
+
 
 h1 {
-  font-family: "Sacramento";
+  font-family: "Lobster Two";
+  font-size: 72px;
+  margin: 50px auto 0 auto;
+  color: #d8d3cd;
 }
 
-h5 {
-  font-family: "Oswald";
+h2 {
+  font-family: "Roboto";
+  margin-bottom: 0;
+  font-size: 24px;
+  padding-bottom: 15px;
+  color: #d8d3cd;
+}
+
+h5, p {
+  font-family: "Roboto";
+  color: "#797a7e";
+
+
 }
 
 .card {
   opacity: 0.9;
-  background-color: tan;
-  border-radius: 25px;
+  background-color: #797a7e;
   border-color: black;
-  margin-top: 25px;
 }
-
-#Lorem {
-  padding: 50px;
-}
-
 
 #plantCards {
   margin: 10px;
-}
-
-#img {
-  float: right;
 }
