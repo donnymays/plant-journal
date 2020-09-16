@@ -26,7 +26,7 @@ export class Plant {
     if(this.waterDay == "true"){
       let firstDay = new Date(); //current date
       let nextWeek = new Date(firstDay.getTime() + 7 * 24 * 60 * 60 * 1000);
-      this.waterDay = `Water next on ${nextWeek}`;
+      this.waterDay = `Water next on ${nextWeek}`.slice(0,30);
     } else {
       this.waterDay = "Don't forget to water!";
     }
