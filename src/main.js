@@ -51,8 +51,6 @@ $(document).ready(function () {
     let journal = new Journal();
     journal.addPlant(newPlant);
     showPlantCard(journal);
-    console.log(newPlant);
-    console.log(newPlant.waterDay);
 
   });
 });
