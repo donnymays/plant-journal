@@ -20,7 +20,7 @@ function removePlant(id) {
 function attachPlantListeners() {
   $('#deleteButton').click(function() {
     removePlant(this.id);
-  })
+  });
 }
 
 function showPlantCard(plantCardToDisplay) {
