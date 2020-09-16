@@ -3,7 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Plant from './plant.js';
-import Journal from './journal.js';
+import { Journal } from './journal.js';
 
 
 function removePlant(id) {
@@ -14,7 +14,7 @@ function removePlant(id) {
         return true;
       }
     }
-  };
+  }
   return false;
 }
 
@@ -25,10 +25,10 @@ function attachPlantListeners() {
 }
 
 function showPlantCard(plantCardToDisplay) {
-  let plantDiv = $("div#plantCards");
+  let plantDiv = $("div#bottomDiv");
   let htmlForPlantCard = "";
   plantCardToDisplay.plants.forEach(function (plant) {
-    htmlForPlantCard += "<div class='col-md-4'><div class='card'><div class='card-body'><h5 id='plantCardTitle' class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2 text-muted'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p><button id='deleteButton' class='btn-dark' type='button'>Remove plant</button>";
+    htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' ><div class='card-body'><h5 id='plantCardTitle' class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p><button id='deleteButton' class='btn-dark' type='button'>Remove plant</button>";
     plantDiv.append(htmlForPlantCard);
   });
 }

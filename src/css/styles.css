@@ -1,34 +1,79 @@
-.jumbotron {
-  background-image: linear-gradient(green, lightgreen);
-  border: black;
-  border-width: 5px;
+#title-div {
+  background-color: #797a7e;
+  opacity: 0.8;
+  position:relative;
+  width: auto;
+  margin-bottom: 0;
+  padding-left: 50px;
+  text-align: left;
 }
+
+#middle-div {
+  padding-top: 50px;
+  background-color: #f7f2e7;
+  opacity: 0.7;
+}
+
+#bottom-div {
+  background-color: #f7f2e7;
+  opacity: 0.7;
+}
+
+body {
+  text-align: center;
+  margin: none;
+}
+
 
 h1 {
-  font-family: "Sacramento";
+  font-family: "Lobster Two";
+  font-size: 72px;
+  margin: 50px auto 0 auto;
+  color: #d8d3cd;
 }
 
-h5 {
-  font-family: "Oswald";
+h2 {
+  font-family: "Roboto";
+  margin-bottom: 0;
+  font-size: 24px;
+  padding-bottom: 15px;
+  color: #d8d3cd;
+}
+
+h5, p {
+  font-family: "Roboto";
+  color: "#797a7e";
+}
+
+footer {
+  margin-top: 0;
+  padding-top: 30px;
+  background-color: #797a7e;
+  font-size: 12px;
 }
 
 .card {
   opacity: 0.9;
-  background-color: tan;
-  border-radius: 25px;
-  border-color: black;
-  margin-top: 25px;
+  background-color: #797a7e;
 }
 
-#Lorem {
-  padding: 50px;
+.PlantCard { 
+  margin: 25px 50px;
 }
 
-
-#plantCards {
-  margin: 10px;
+.navbar {
+  padding: 0 0 24px;
 }
 
-#img {
-  float: right;
+.navbar-brand {
+  font-family: "Lobster Two";
 }
+
+.nav-item {
+  padding: 0 18px;
+}
+
+#text-column {
+  padding: 50px 100px;
+}
+

@@ -1,79 +1,89 @@
 <html lang="en-US">
-<<<<<<< HEAD
-  <head>
-    <title>plant-journal</title>
-  </head>
-  <body style="background-image: url(https://cdn.apartmenttherapy.info/image/upload/v1586153210/at/news-culture/2020-04/200402-bloomscape-zoom-2.png);">
-    <div class="jumbotron">
 
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Roboto&display=swap" rel="stylesheet">
   <title>plant-journal</title>
 </head>
-<body style="background-image: url(https://cdn.apartmenttherapy.info/image/upload/v1586153210/at/news-culture/2020-04/200402-bloomscape-zoom-2.png);">
-  <div class="jumbotron">
-    <div class="col-md-3">
 
-      <h1>Plant Diary</h1>
-      <h5>Keep track of your plants as they grow!</h5>
-    </div>
-    <div class="col-md-3" id="img">
-      <img src="https://e7.pngegg.com/pngimages/765/963/png-clipart-houseplant-silhouette-flowerpot-plant-silhouette-animals-monochrome.png" alt="flower" style="width:30px;height:30px;">
-    </div>
+
+<body
+  style="background-image: url(https://cdn.apartmenttherapy.info/image/upload/v1586153210/at/news-culture/2020-04/200402-bloomscape-zoom-2.png);">
+  <div id="title-div">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="">Plant Diary</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Your Plants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cta">Research</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1>Plant Diary</h1>
+    <h2>Keep track of your plants as they grow!</h2>
   </div>
-  <div class="container">
-  
-        <div class="card" id="Lorem">
-          <div class="row">
-          <div class="col-md-6">
-            <div class="card-body">
-              <form id="addPlant">
-                <label for="plantName"><span><h5>Plant Name:</h5></span></label>
-                <input id="plantName" type="text">
-                <h5>Select your plant type:</h5>
-                <input name="plantType" type="radio" value="succulent">
-                <label for="succulent">Succulent</label>
-                <input name="plantType" type="radio" value="cactus">
-                <label for="cactus">Cactus</label>
-                <input name="plantType" type="radio" value="flower">
-                <label for="flower">Flower</label>
-                <input name="plantType" type="radio" value="fern">
-                <label for="fern">Fern</label>
-                <br>
-                <h5 label for="plantBirthday">Select the day of planting:</label></h5>
-                <input id="plantBirthday" type="date" name="plantBirthday">
-                <h5>Did you water this plant today?</h5>
-                <input name="waterDay" type="radio" value="true">
-                <label for="waterDay">Yes</label>
-                <input name="waterDay" type="radio" value="false">
-                <label for="waterDay">No</label>
-                <button class="btn-success" type="submit">Add your plant!</button>
-                <br>
-            </div>
-          </div>
-          
-          <div class="col-md-6" >
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.</p>
-          </div>
+    
+
+  <div id="middle-div">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card-body">
+          <form id="addPlant">
+            <label for="plantName">Plant Name:</label>
+            <input id="plantName" type="text">
+            <hr>
+            <p>Select your plant type:<p>
+            <input name="plantType" type="radio" value="succulent">
+            <label for="succulent">Succulent</label>
+            <input name="plantType" type="radio" value="cactus">
+            <label for="cactus">Cactus</label>
+            <input name="plantType" type="radio" value="flower">
+            <label for="flower">Flower</label>
+            <input name="plantType" type="radio" value="fern">
+            <label for="fern">Fern</label>
+            <hr>
+            <label for="plantBirthday">Select the day of planting:</label>
+            <input id="plantBirthday" type="date" name="plantBirthday">
+            <hr>
+            <p>Have you watered recently?</p>
+            <input name="waterDay" type="radio" value="true">
+            <label for="waterDay">Yes</label>
+            <input name="waterDay" type="radio" value="false">
+            <label for="waterDay">No</label>
+            <hr>
+            <button class="btn-outline" type="submit">Add your plant!</button>
+          </form>
         </div>
       </div>
-     </div>
-
-    <div id="plantCards" class="row"></div>
+      <div id="text-column" class="col-md-6">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.</p>
+      </div>
+    </div>
   </div>
-  </form>
-<br>
-<br>
-<br>
-  <div class="container">
+  <div id="bottomDiv" class="row"></div>
+ 
+ 
+  <!-- <div class="container"> -->
     <footer class="card">
       <p>Authors: Alex Goodwin, Garrett Brown, Alma Frankenstein, Donny Mays, Chloe Hellberg </p>
     </footer>
-  </div>
+  <!-- </div> -->
 
 </body>
+
 </html>
