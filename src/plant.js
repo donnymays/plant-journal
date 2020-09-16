@@ -1,8 +1,17 @@
-export default class Plant {
-  constructor(name, type, birthday, waterDay) {
-    this.name = name;
-    this.type = type;
-    this.birthday = birthday;
-    this.waterDay = waterDay;
+export default class Trefle {  
+  static searchTrefle(query) {
+    return new Promise(function(resolve, reject) {
+      let request = new XMLHttpRequest();
+      const url = `https://trefle.io/api/v1/plants/search?token=${process.env.API_KEY}&q=${query}`;
+      request.onload = function() {
+        if (this.status === 200) {  
+          resolve(request.response);
+        } else {
+          reject(request.response);
+        }
+      };
+      request.open("GET", url, true);
+      request.send();
+    });
   }
 }

@@ -18,7 +18,7 @@ export class Journal {
           return this.plants[i];
         }
       }
-    };
+    }
     return false;
   }
   removePlant(id) {
