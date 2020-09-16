@@ -2,17 +2,26 @@
   background-color: #797a7e;
   opacity: 0.8;
   position:relative;
-  padding-top: 100px;
+  width: auto;
   margin-bottom: 0;
+  padding-left: 50px;
+  text-align: left;
 }
 
 #middle-div {
+  padding-top: 50px;
+  background-color: #f7f2e7;
+  opacity: 0.7;
+}
+
+#bottom-div {
   background-color: #f7f2e7;
   opacity: 0.7;
 }
 
 body {
   text-align: center;
+  margin: none;
 }
 
 
@@ -34,16 +43,37 @@ h2 {
 h5, p {
   font-family: "Roboto";
   color: "#797a7e";
+}
 
-
+footer {
+  margin-top: 0;
+  padding-top: 30px;
+  background-color: #797a7e;
+  font-size: 12px;
 }
 
 .card {
   opacity: 0.9;
   background-color: #797a7e;
-  border-color: black;
 }
 
-#plantCards {
-  margin: 10px;
+.PlantCard { 
+  margin: 25px 50px;
 }
+
+.navbar {
+  padding: 0 0 24px;
+}
+
+.navbar-brand {
+  font-family: "Lobster Two";
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+#text-column {
+  padding: 50px 100px;
+}
+
