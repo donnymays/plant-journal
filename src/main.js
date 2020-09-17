@@ -5,7 +5,17 @@ import './css/styles.css';
 import { Journal, Plant } from './journal.js';
 import Trefle from './plant.js';
 
-
+function addPlantIcon(plant) {
+  if (plant.type == "Succulent") {
+    plant.type = plant.type + "<hr><img src='https://i.imgur.com/Dc7jCRy.png' alt='Succulent Icon' width='100px' height='100px'>";
+  } else if (plant.type == "Cactus") {
+    plant.type = plant.type + "<hr><img src='https://i.imgur.com/nHpOeFO.png' alt='Cactus Icon' width='100px' height='100px'>";
+  } else if (plant.type == "Flower") {
+    plant.type = plant.type + "<hr><img src='https://i.imgur.com/e2J8NT7.png' alt='Flower Icon' width='100px' height='100px'>";
+  } else {
+    plant.type = plant.type + "<hr><img src='https://i.imgur.com/yFaRVgi.png' alt='Fern Icon' width='100px' height='100px'>";
+  }
+}
 function showPlantCard(plant) {
   let plantDiv = $("div#bottomDiv");
   let htmlForPlantCard = "";
@@ -34,7 +44,10 @@ $(document).ready(function () {
     newPlant.waterDate(inputtedWaterDay);
 
     journal.addPlant(newPlant);
+    addPlantIcon(newPlant);
     showPlantCard(newPlant);
+
+
 
     $(".deleteButton").click(function () {
       journal.removePlant(this.id);
@@ -67,7 +80,7 @@ $(document).ready(function () {
 
         for (let i = 0; i < body.data.length; i++) {
           $(".plantResults").append(`<br><li>Common Name: ${body.data[i].common_name}</li> <ul> <img src=${body.data[i].image_url}></ul>`);
-        
+
         }
       });
     });
