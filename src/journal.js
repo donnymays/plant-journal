@@ -35,13 +35,15 @@ export class Journal {
 }
 
 export class Plant {
-  constructor(name, type, birthday, waterDay) {
+  constructor(name, type, birthday, waterDay, plantTypeSpan) {
     this.name = name;
     this.type = type;
     this.birthday = birthday;
     this.waterDay = waterDay;
     this.waterNote = "";
     this.waterInstructions = "";
+    this.plantTypeSpan = plantTypeSpan;
+    
   }
 
   waterDate(inputDate) {
@@ -85,13 +87,13 @@ export class Plant {
   }
   createTypeSpan() {
     if (this.type == "Succulent") {
-      let succulentSpan = "<span>10 days until the next watering</span>";
+      this.plantTypeSpan = "10 days until the next watering";
     } else if (this.type == "Cactus") {
-      let cactusSpan = "<span>14 days until the next watering</span>";
+      this.plantTypeSpan = "14 days until the next watering";
     } else if (this.type == "Flower") {
-      let flowerSpan = "<span>7 days until the next watering</span>";
+      this.plantTypeSpan = "7 days until the next watering";
     } else {
-      let fernSpan = "<span>4 days until the next watering</span>";
+      this.plantTypeSpan = "4 days until the next watering";
     }
   }
 }

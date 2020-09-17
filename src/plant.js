@@ -14,4 +14,4 @@ export default class Trefle {
       request.send();
     });
   }
-}
+} 

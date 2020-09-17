@@ -91,3 +91,7 @@ footer {
 .plantResults{
   font-family: "Lobster Two";
 }
+
+#typeSpan {
+  display: none;
+}
