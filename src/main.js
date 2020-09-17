@@ -20,7 +20,7 @@ function showPlantCard(plant) {
   let plantDiv = $("div#bottomDiv");
   let htmlForPlantCard = "";
 
-  htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' id='plantCard" + plant.id + "'><div class='card-body'><h5 class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p><span id=waterSpan" + plant.id + ">" + plant.waterDay + "</span></p><button class='btn-dark deleteButton' type='button'>Remove plant</button><button class='btn-dark waterButton' type='button'>Water plant</button>";
+  htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' id='plantCard" + plant.id + "'><div class='card-body'><h5 class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.name + "'s birthday: "  + plant.birthday + "</p><p><span id=waterSpan" + plant.id + ">" + plant.waterDay + "</span></p><button class='btn-dark deleteButton' type='button'>Remove plant</button><button class='btn-dark waterButton' type='button'>Water plant</button>";
   plantDiv.append(htmlForPlantCard);
 }
 
@@ -47,18 +47,13 @@ $(document).ready(function () {
     addPlantIcon(newPlant);
     showPlantCard(newPlant);
 
-
-
     $(".deleteButton").click(function () {
       journal.removePlant(this.id);
       $("#bottomDiv").hide();
-      alert("it works");
     });
-
 
     $(".waterButton").click(function () {
       newPlant.resetWaterDay();
-      console.log(newPlant.waterDay);
     });
   });
 
@@ -68,7 +63,7 @@ $(document).ready(function () {
     $("#authors").hide();
   });
 
-  $("#searchPlants").click(function () {
+  $("#searchPlants").click(function () {   
     event.preventDefault();
 
     const query = $("#findPlants").val();
@@ -79,9 +74,10 @@ $(document).ready(function () {
       const body = JSON.parse(response);
 
       for (let i = 0; i < body.data.length; i++) {
+        
         $(".plantResults").append(`<br><li>Common Name: ${body.data[i].common_name}</li> <ul> <img src=${body.data[i].image_url}></ul>`);
-
+        
       }
     });
   });
-});  
+}) 
