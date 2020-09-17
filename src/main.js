@@ -10,7 +10,7 @@ function showPlantCard(plant) {
   let plantDiv = $("div#bottomDiv");
   let htmlForPlantCard = "";
 
-  htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' id='plantCard" + plant.id + "'><div class='card-body'><h5 class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p>" + plant.waterDay + "</p><button class='btn-dark deleteButton' type='button'>Remove plant</button><button class='btn-dark waterButton' type='button'>Water plant</button>";
+  htmlForPlantCard += "<div class='col-md-4'><div class='card plantCard' id='plantCard" + plant.id + "'><div class='card-body'><h5 class='card-title'>" + plant.name + "</h5><h6 id='plantCardType' class='card-subtitle mb-2'>" + plant.type + "</h6><p>" + plant.birthday + "</p><p><span id=waterSpan" + plant.id + ">" + plant.waterDay + "</span></p><button class='btn-dark deleteButton' type='button'>Remove plant</button><button class='btn-dark waterButton' type='button'>Water plant</button>";
   plantDiv.append(htmlForPlantCard);
 }
 

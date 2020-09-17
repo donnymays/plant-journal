@@ -71,7 +71,7 @@ export class Plant {
     }
   }
 
-  //this method works but it needs to somehow change the plant.waterDay in the crazy html function in main.js
+  //this method works but it needs to somehow change the DOM ->plant.waterDay in the crazy html function in main.js
   resetWaterDay() {
     if (this.type == "succulent") {
       this.waterDay = "10 days until the next watering";
@@ -82,6 +82,5 @@ export class Plant {
     } else {
       this.waterDay = "4 days until the next watering";
     }
-
   }
 }
