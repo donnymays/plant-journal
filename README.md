@@ -38,9 +38,9 @@ _If you have issues or need support, please contact any of the fdllowing:_
 
 ## Technologies Used
 
-Utilized the following toolsL
+Utilized the following tools:
 
-* HTML, CSS, jQuery, Bootstrap, JavaScript, Node Project Manager, Jest, VS Code.
+* HTML, CSS, jQuery, Bootstrap, JavaScript, Node Project Manager, Jest, VS Code, "Trefle API".
 
 ### License
 
