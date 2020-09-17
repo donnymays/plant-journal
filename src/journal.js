@@ -43,7 +43,6 @@ export class Plant {
     this.waterNote = "";
     this.waterInstructions = "";
   }
-
   waterDate(inputDate) {
     let daysTilWatering = 0;
 
@@ -70,8 +69,6 @@ export class Plant {
       this.waterDay = "Water Me Please!"
     }
   }
-
-  //this method works but it needs to somehow change the DOM ->plant.waterDay in the crazy html function in main.js
   resetWaterDay() {
     if (this.type == "Succulent") {
       this.waterDay = "10 days until the next watering";

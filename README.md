@@ -4,27 +4,36 @@
 
 #### By _**Alex Goodwin, Garrett Brown, Alma Frankenstein, Donny Mays, Chloe Hellberg**_
 
-## Description
+## Description 
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This webpage allows users to keep track of their plants. While inputting all of their plants, the user can indicate how many days since the plant was last watered, as well as the plant type and day of planting.After a plant is added, a card is created indicating when the plant needs to be watered again. A plant can be removed when the user is done tracking it._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+#### Download project from GitHub
+* Make sure you have the latest version of your favorite browser.
+* Clone the "Plant-Journal" repository from Github to your computer.
+* Navigate to the root directory of the project in the terminal and type 'code .' to view project in a browser.
+* Open the project in text editor (like VS Code) to view code.
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+#### NPM and Dependencies
+* Run npm install to install application dependencies to your environment.
+* Once dependencies are installed, type npm run start in your terminal to get a server started and to view the application.
 
-## Known Bugs
+#### To set up an API
+* Visit https://trefle.io/
+* Click "Get Started" and create an account. You will receive an email asking for you to confirm your account.
+* Click on "Account." and get your API key (this is labeled as "Access token.")
+* Create a .env file in the root directory of this project, and copy paste the API key into the file ( API_KEY={paste key here})
 
-_There are currently no known bugs._
+
+## Known Bugs 
+
+_The delete button is currently under construction and does not work at this time._
 
 ## Support and contact details
 
-_If you have issues or need support, please contact any of the fdllowing:_
+_If you have issues or need support, please contact any of the following:_
  Alex Goodwin <hagoodwi@gmail.com>
 
  Garrett Brown <garrettpaulbrown@gmail.com>
@@ -40,13 +49,13 @@ _If you have issues or need support, please contact any of the fdllowing:_
 
 Utilized the following tools:
 
-* HTML, CSS, jQuery, Bootstrap, JavaScript, Node Project Manager, Jest, VS Code, "Trefle API".
+* HTML, CSS, Markdown, jQuery, Bootstrap, JavaScript, Node Project Manager, Jest, VS Code, "Trefle API".
 
 ### License
 
 *This program available under the MIT License.*
 
-Copyright (c) 2016 **_Alex Goodwin, Garrett Brown, Alma Frankenstein, Donny Mays, Chloe Hellberg_**
+Copyright (c) 2020 **_Alex Goodwin, Garrett Brown, Alma Frankenstein, Donny Mays, Chloe Hellberg_**
 
 
 
