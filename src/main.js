@@ -60,29 +60,28 @@ $(document).ready(function () {
       newPlant.resetWaterDay();
       console.log(newPlant.waterDay);
     });
+  });
 
+  $("#research").click(function () {
+    $("#api-search").show();
+    $("#homepage").hide();
+    $("#authors").hide();
+  });
 
-    $("#research").click(function () {
-      $("#api-search").show();
-      $("#homepage").hide();
-      $("#authors").hide();
-    });
+  $("#searchPlants").click(function () {
+    event.preventDefault();
 
-    $("#searchPlants").click(function () {
-      event.preventDefault();
+    const query = $("#findPlants").val();
+    $("#findPlants").val("");
 
-      const query = $("#findPlants").val();
-      $("#findPlants").val("");
+    let promise = Trefle.searchTrefle(query);
+    promise.then(function (response) {
+      const body = JSON.parse(response);
 
-      let promise = Trefle.searchTrefle(query);
-      promise.then(function (response) {
-        const body = JSON.parse(response);
+      for (let i = 0; i < body.data.length; i++) {
+        $(".plantResults").append(`<br><li>Common Name: ${body.data[i].common_name}</li> <ul> <img src=${body.data[i].image_url}></ul>`);
 
-        for (let i = 0; i < body.data.length; i++) {
-          $(".plantResults").append(`<br><li>Common Name: ${body.data[i].common_name}</li> <ul> <img src=${body.data[i].image_url}></ul>`);
-
-        }
-      });
+      }
     });
   });
 });  

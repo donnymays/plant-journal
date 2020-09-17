@@ -38,7 +38,9 @@ _If you have issues or need support, please contact any of the fdllowing:_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+Utilized the following toolsL
+
+* HTML, CSS, jQuery, Bootstrap, JavaScript, Node Project Manager, Jest, VS Code.
 
 ### License
 
