@@ -83,4 +83,15 @@ export class Plant {
       this.waterDay = "4 days until the next watering";
     }
   }
+  createTypeSpan() {
+    if (this.type == "Succulent") {
+      let succulentSpan = "<span>10 days until the next watering</span>";
+    } else if (this.type == "Cactus") {
+      let cactusSpan = "<span>14 days until the next watering</span>";
+    } else if (this.type == "Flower") {
+      let flowerSpan = "<span>7 days until the next watering</span>";
+    } else {
+      let fernSpan = "<span>4 days until the next watering</span>";
+    }
+  }
 }
