@@ -18,3 +18,12 @@ To Do:
   
   -Allow users to add notes to plants ie “found spider mites! Treated with neem oil”:
 
+Plant icon links:
+succulent: <blockquote class="imgur-embed-pub" lang="en" data-id="a/MawO3gV"  ><a href="//imgur.com/a/MawO3gV">succulent</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+cactus: <blockquote class="imgur-embed-pub" lang="en" data-id="a/Bv1uCOW"  ><a href="//imgur.com/a/Bv1uCOW">cactus</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+flower: <blockquote class="imgur-embed-pub" lang="en" data-id="a/O3ogbLo"  ><a href="//imgur.com/a/O3ogbLo">flower</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+fern: <blockquote class="imgur-embed-pub" lang="en" data-id="a/Ht3A8YY"  ><a href="//imgur.com/a/Ht3A8YY">fern</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
